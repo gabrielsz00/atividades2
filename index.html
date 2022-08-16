@@ -1,65 +1,54 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>Site da Escola</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <link rel="stylesheet" href="estilo.css">
-
+<html><head>
+    <title>Pizzaria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+<script src="main.js"></script>
 </head>
 
 <body>
-
-
-
-
-  <nav class="navbar-inverse myNavbar"> 
-
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> 
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-            <a href="#" class="navbar-brand">EEB Prof Cecília Lotin</a>
+    <div class="topnav">
+        <a class="active" href="#">Pizzaria</a>
+        <div class="topnav-right">
+         <a href="#viewblock">Visualizar Menu</a>
+         <a href="#addTopings">Adicionar Menu</a>
+        </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar"> 
-    <ul class="nav navbar-nav"> 
-        <li><a href="#videos"> Vídeos </a> </li>
-        <li><a href="#Trabalhos"> Trabalhos </a> </li>
-        <li><a href="#escritos"> Escritos </a> </li>
-        <li><a href="#contato"> Contatos </a> </li>
-</ul>
 
-</nav>
+    <div class="row" id="viewblock">
+        <div class="imgDiv"> 
+            <img class="img-responsive" src="images/pizza.png">
+        </div>
+        <div class="menuDiv">
+            <button id="menuList" onclick="getMenu()">Mostrar Menu</button>
+           <div id="displayMenu"></div>
+        </div>
+    </div>
+    
+    <div class="newRow" id="addTopings">
+        <div class="block1">
+            <input id="addItem" placeholder="Digite aqui para adicionar ingredientes"> 
+    
+			<button id="addSugestao"class= "btn btn-success" onclick="addTop()">Adicionar Sugestão</button>
+            <br>
+            <br>
+            <button id="addToppings" onclick="addItem()">Mostrar Pizza</button>
+        </div>
+		
+        <div class="block2">
+            <div id="displayAddedMenu">
+            </div>
+        </div>
+        
+    </div>
 
-<h1>EEB Prof Cecília Lotin</h1>
-<p>Escola de educação basica</p>
-<img src="foto1.jpg" >
-<br>
-<br>
-<h1>Lugares da escola.</h1>
-<div class="viagem_principal">
-  <img src="gin.jpg">
-  <h4><kbd>Ginásio</kbd></h4>
-<hr>
-    <h5>Usado para educação física e auditório.</h5>
-  <h4><kbd>Refeitório</kbd></h4>
-  <h5>Usado para o lanche e avisos rápidos.</h5>
-  <img src="hort.jpg">
-  <h4><kbd>Horta</kbd></h4>
-  <h5>Usado para cultivar chás em temperos.</h5>
-</div>
+    <div>
+        <img class="img-responsive" src="images/topping.png">
+    </div>
 
-</body>
 
-</html>
+
+</body></html>
