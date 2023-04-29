@@ -1,44 +1,49 @@
-<!DOCTYPE html>
 <html>
+
 <head>
-	<title>Lista de Convidados</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<script src="Tmain.js"></script>
+  <title>Aplicativo de Filtro em Tempo Real usando a Rede Neural PoseNet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
-<body>
+
+<body background="fundo.jpg">
 <center>
-<h3 style="margin-top: 20px; margin-bottom: 20px; ">
-	Lista de Convidados
-</h3>
-
-<div id="rows">
-
-<input type="text" placeholder="Insira o Nome" id="name1">
-<button onclick="submit()" id="submitButton">
-	Enviar
-</button><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-	
-<hr>
-
-<div id="displayName">
-</div>
-<hr>
-	<div id="Show1"><h3 id="hd1">Lista de Convidados</h3>
-		<button onclick="show()" id="show">Mostrar</button>
-		<p id="p1"></p></div>
-	
-<hr>
-<button onclick="sorting()" id="sortButton">
-	Lista Organizada
-</button>
-	<div id="sorted"></div>
-    </div>
-	<hr>
-	<input type="text" placeholder="Pesquisar Nome" id="s1">&nbsp;
-	<button onclick="searching()" id="srch">Pesquisar</button>
-	<p id="p2"></p>
+  <h3 class="btn btn-info">Máscara em Tempo Real</h3>
+  <hr>
+  <button onclick="takeSnapshot()" class="btn btn-success">Tirar Foto</button>
 </center>
-		
+
+
+<div id="fundobot">
+  <h1>MÁSCARAS:</h1>
+<button class="botoes" onclick="oculos()">😎</button>
+<button class="botoes" onclick="feliz()">😀</button>
+<br>
+<button class="botoes" onclick="coco()">💩</button>
+<button class="botoes" onclick="gabriel()"><img src="mascara.png" width="100px" height="100px" id="mascaraimg"></button>
+<h1 id="kaka">Selecionado:</h1>
+</div>
+<label for="numero">Posição y(Padrão:302):</label>
+<input type="number" id="cima" onchange="mudarposis()">
+
+
+
+<form>
+  <label for="imagem">Selecione uma imagem:</label>
+  <input type="file" id="imagem" name="imagem">
+  <button type="submit" onclick="preloa()">Enviar</button>
+</form>
+
+
+<script src="main.js"></script>
 </body>
+
 </html>

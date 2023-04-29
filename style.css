@@ -1,33 +1,24 @@
-#submitButton
-{
-	margin-top: 20px; 
-	margin-bottom: 20px; 
-}
-#sortButton
-{
-	display: none;
-	margin-top: 20px; 
-	margin-bottom: 20px; 
-}
+  h3
+  {
+    font-size: 25px !important;
+  }
+  canvas {
+    border:2px dashed black;
+  }
 
-input
-{
-	margin: 10px;
-}
-.displayNameWithCommas
-{
-	border: 1px solid green;
-    padding: 10px;
-	background-color: greenyellow;
-	border-radius: 10px;
-    width: 50%;
-}
+  .botoes{
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+  }
 
-#displayNameWithoutCommas
-{
-	border: 1px solid red;
-    padding: 10px;
-    background-color: lightcoral;
-	border-radius: 10px;
-    width: 50%;
-}
+  #mascaraimg{
+    text-align: center;
+  }
+
+  #fundobot{
+    background-color: aquamarine;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+  }
